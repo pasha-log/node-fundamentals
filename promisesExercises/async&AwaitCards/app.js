@@ -2,11 +2,6 @@ $(function() {
 // Make a request to the Deck of Cards API to request a single card from a newly shuffled deck. 
 // Once you have the card, console.log the value and the suit (e.g. “5 of spades”, “queen of diamonds”).
     let baseURL = 'https://deckofcardsapi.com/api/deck'; 
-  
-    // $.getJSON(`${baseURL}/new/draw/`).then(data => {
-    //     let { suit, value } = data.cards[0];
-    //     console.log(`${value.toLowerCase()} of ${suit.toLowerCase()}`);
-    //   });
     
     async function singleCardFromShuffle() {
       let data = await $.getJSON(`${baseURL}/new/draw/`)
