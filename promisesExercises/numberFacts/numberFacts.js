@@ -22,3 +22,7 @@ Promise.all(
 ).then(facts => {
   facts.forEach(data => $("body").append(`<p>${data.text}</p>`));
 });
+
+
+
+
