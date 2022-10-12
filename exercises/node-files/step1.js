@@ -4,17 +4,18 @@
 
 // Then, write some code that calls that function, allowing you to specify the path argument via the command line.
 
-const process = require('process');
 const fs = require('fs')
+const process = require('process');
 
 function cat(path) {
-    fs.readFile(path, 'utf8', (err, data) => {
-        if(err) {
-            console.log("ERROR found:", err);
-            process.kill(1)
+    fs.readFile(path, 'utf8', function(error, data) {
+        if(error) {
+            console.log(`ERROR found:, ${error}`);
+            process.exit(1)
+        } else {
+            console.log("DATA...", data);
         }
-        console.log("DATA...", data)
-})
+    });
 }
 
-cat(process.argv)[2]
+cat(process.argv[2]);

@@ -113,7 +113,7 @@ process.exit(exit_code)
 // Exit the program immediately and return an exit code to the shell. 
 
 process.on('exit', function(code){
-    console.log('EXITING WITH CODE: ${code}')
+    console.log(`EXITING WITH CODE: ${code}`)
 })
 
 for (let arg of process.argv) {
@@ -230,7 +230,7 @@ fs.appendFile('poem.txt', "\n APPEND ME!!!", 'utf8', err => {
 })
 
 // Writing FIles 
-fs.writeFile(path, data, encoding, callack)
+fs.writeFile(path, data, encoding, callback)
 
 // 'a' : Open file for appending. This file is created if it does not exsit. 
 // flag <string> Default: 'w' for write 
